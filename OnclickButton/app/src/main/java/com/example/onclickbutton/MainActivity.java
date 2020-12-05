@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     EditText Name;
     EditText txtpass;
     Button btnMain;
+    TextView tvClick;
+    TextView tvHere;
 
 
     @Override
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         Name = findViewById(R.id.txtNama);
         txtpass = findViewById(R.id.txtPwd);
+        tvClick = findViewById(R.id.tv_click);
+        tvHere = findViewById(R.id.tv_here);
         btnMain = findViewById(R.id.btnMain);
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(EXTRA_PASSWORD, ambilNilaiPassword);
                 startActivity(intent);
                 Toast.makeText(MainActivity.this, "Berpindah Activity", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        tvClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String ambilNilaiEditTExt = Name.getText().toString();
+                tvHere.setText(ambilNilaiEditTExt);
+                Toast.makeText(MainActivity.this, "Halo, " + ambilNilaiEditTExt, Toast.LENGTH_SHORT).show();
             }
         });
     }
