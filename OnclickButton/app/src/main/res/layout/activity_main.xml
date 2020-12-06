@@ -26,6 +26,14 @@
             android:layout_height="wrap_content"
             android:hint="Password"/>
 
+        <EditText
+            android:id="@+id/testText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:hint="please insert your word"/>
+
         <Button
             android:id="@+id/btnMain"
             android:layout_marginTop="10dp"

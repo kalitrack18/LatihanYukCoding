@@ -14,8 +14,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "Nama";
     public static final String EXTRA_PASSWORD = "Password";
+    public static final String TEXT_EXTRA = "InsertText";
     EditText Name;
     EditText txtpass;
+    EditText inText;
     Button btnMain;
     TextView tvClick;
     TextView tvHere;
@@ -30,15 +32,18 @@ public class MainActivity extends AppCompatActivity {
         txtpass = findViewById(R.id.txtPwd);
         tvClick = findViewById(R.id.tv_click);
         tvHere = findViewById(R.id.tv_here);
+        inText = findViewById(R.id.testText);
         btnMain = findViewById(R.id.btnMain);
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String ambilNilaiEditext = Name.getText().toString();
                 String ambilNilaiPassword = txtpass.getText().toString();
+                String kirmiText = inText.getText().toString();
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 intent.putExtra(EXTRA_MESSAGE, ambilNilaiEditext);
                 intent.putExtra(EXTRA_PASSWORD, ambilNilaiPassword);
+                intent.putExtra(TEXT_EXTRA, kirmiText);
                 startActivity(intent);
                 Toast.makeText(MainActivity.this, "Berpindah Activity", Toast.LENGTH_SHORT).show();
             }
