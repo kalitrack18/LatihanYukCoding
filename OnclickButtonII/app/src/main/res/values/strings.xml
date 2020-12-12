@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OnclickButtonII</string>
+    <string name="nama">Nama :</string>
+    <string name="input_name">input name</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="insert_here">Insert here</string>
+</resources>
