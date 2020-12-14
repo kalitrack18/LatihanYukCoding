@@ -3,4 +3,8 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="btn_login">Login</string>
+    <string name="tv_nama">Nama  : </string>
+    <string name="tv_alamat">Alamat : </string>
+    <string name="insert_address">insert address</string>
+    <string name="tv_jurusan">Jurusan</string>
 </resources>
